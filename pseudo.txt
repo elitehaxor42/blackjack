@@ -1,0 +1,74 @@
+Create a program that allows the user to play BlackJack against a computer dealer.
+
+EXAMPLE
+===========================
+BLACKJACK!
+Blackjack payout is 3:2
+
+Money:100.0
+Bet amount: 10 # int? clarify!!
+
+DEALER'S SHOW CARD:
+9 of Diamonds
+
+YOUR CARDS:
+5 of Hearts
+5 of Clubs
+
+Hit or stand? (hit/stand): hit
+
+YOUR CARDS:
+5 of Hearts
+5 of Clubs 
+7 of Diamonds
+
+Hit or stand? (hit/stand): stand
+
+DEALER'S CARDS:
+9 of Diamonds
+Jack of Hearts
+
+YOUR POINTS: 17
+DEALER'S POINTS: 19 #dealer is just another pull from card shuffle 
+
+Sorry. You lose.
+Money: 90.0
+
+Play again? (y/n): n
+
+Come back soon!
+Bye!
+=================================================
+
+#FOR THIS BLACKJACK PROGRAM DEALER MUST HIT UNTIL 17
+#No splitting of hands and no doublin' down!! straight jack yo!!
+#ACCEPT INTEGER OR FLOAT ENTRIES FOR BET_AMOUNT
+#Getting a blackjack (score of 21) pays out 3:2, which is 1.5 * BET_AMOUNT
+#ROUND BLACKJACK PAYOUT TO MAXIMUM OF TWO DECIMAL PLACES
+
+#SPECIFICATIONS CONTINUED
+
+#Use a LIST to store the SUIT, RANK, and POINT VALUE for each CARD
+#KING, QUEEN = 10
+#numbers on card = point value of card 
+#ACE = 1 or 11 depending on whether it would bust the hand if it were valued at 11. 
+
+#USE a LIST OF LISTS to store the CARDS IN THE DECK, you can use two nested loops to create a deck of cards.
+#USE a LIST OF LISTS to store the DEALER'S HAND and the PLAYER'S HAND
+
+#WHEN PROGRAM STARTS, it should read the player's money amount from a CSV file named "money.txt"
+#The program should write the player's money amount to a file any time the data is changed.
+
+#store the functions for writing and reading the money amount in a separate module named "db.py"
+#HANDLE EXCEPTION IF PROGRAM CAN'T FIND DATA FILE
+#HANDLE EXCEPTIONS THAT OCCUR IF USER ENTERS A STRING WHERE AN INTEGER OR FLOAT VALUE IS EXPECTED, \
+	RAISE TypeError
+
+#THE PROGRAM SHOULD VALIDATE THE BET AMOUNT 
+#minimum_bet = 5
+#maximum_bet = 1000
+#bet cannot be bigger than player's current amount of money.
+#If the money amount drops below the minimum bet (5), the program should give the player the 
+#option to buy more chips.
+
+
